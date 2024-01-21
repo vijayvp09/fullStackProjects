@@ -84,7 +84,7 @@ app.put('/books/:id', async (req, res) => {
     }
 
     return res.status(200).send({message: 'Book updated successfully'});
-    }catch (error) {
+    } catch (error) {
         console.log(error.message);
         res.status(500).send({message: error.message})
     }
