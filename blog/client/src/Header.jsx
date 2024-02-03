@@ -6,7 +6,7 @@ export default function Header() {
           <Link to="/" className="logo">MyBlog</Link>
           <nav>
             <Link to="/login" className="login">Login</Link>
-            <Link to="" className="register">Register</Link>
+            <Link to="/register" className="register">Register</Link>
           </nav>
         </header>
     )
