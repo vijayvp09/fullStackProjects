@@ -1,5 +1,6 @@
 import {useState} from 'react';
 
+
 export default function RegisterPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -11,7 +12,13 @@ export default function RegisterPage() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({username, password}),
         })
-        console.log(response)
+        // console.log(response)
+        if(response.status===200) {
+            alert("registration succesfull")
+        }
+        else {
+            alert("registration faild")
+        }
     }
     return (
             <form action="" className="register" onSubmit={register}>
