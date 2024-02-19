@@ -16,7 +16,8 @@ const secret = "asfgahsdaoerfgoia";
 
 app.use(cors({credentials: true, origin:'http://localhost:5173'}));
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser());
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect("mongodb+srv://vijay:krishnakaali@cluster0.lepef44.mongodb.net/?retryWrites=true&w=majority")
 
@@ -83,10 +84,6 @@ app.post('/post',uploadMiddleware.single('file') ,async (req, res) => {
     });
         res.json(postDoc);
     });
-
-    
-
-    res.json(postDoc);
 });
 
 app.get('/post', async(req, res) => {
