@@ -8,11 +8,11 @@ function App() {
   return (
     <>
     <Routes>
-    <Route path="" element={} ></Route>
-    <Route path="" element={} ></Route>
-    <Route path="" element={} ></Route>
-    <Route path="" element={} ></Route>
-    <Route path="" element={} ></Route>
+      <Route path="" element={} ></Route>
+      <Route path="" element={} ></Route>
+      <Route path="" element={} ></Route>
+      <Route path="" element={} ></Route>
+      <Route path="" element={} ></Route>
     </Routes>
       
     </>
